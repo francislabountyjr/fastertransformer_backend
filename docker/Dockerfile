@@ -80,6 +80,7 @@ RUN pip3 install torch==1.9.1+cu111 -f https://download.pytorch.org/whl/torch_st
     pip3 install --extra-index-url https://pypi.ngc.nvidia.com regex fire tritonclient[all]
 
 # for debug
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
 RUN apt-get update -q && \
     apt-get install -y --no-install-recommends openssh-server zsh tmux mosh locales-all clangd sudo && \
     apt-get clean && \
